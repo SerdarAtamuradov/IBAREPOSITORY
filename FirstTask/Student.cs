@@ -8,8 +8,9 @@ namespace FirstTask
 {
     class Student
     {
-        public Mark[] Marks = new Mark[2];
-                 
+        public static int n;
+
+        public Mark[] Marks = new Mark[n];
         public string Name { get; set; }
         public string Surname { get; set; }
         public byte Age { get; set; }
@@ -19,10 +20,10 @@ namespace FirstTask
             byte Quantity = 0;
             float AmountMark = 0;
             for (int i = 0; i < Marks.Length; i++)
-            {                
+            {
                 Quantity++;
                 AmountMark += Marks[i].SubjectMark;
-            }            
+            }
             return AmountMark / Quantity;
         }
 
@@ -30,6 +31,6 @@ namespace FirstTask
         {
             for (int i = 0; i < Marks.Length; i++)
                 Marks[i].SubjectMark = 0;
-        }    
+        }          
     }
 }

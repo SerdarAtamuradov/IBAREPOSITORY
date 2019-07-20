@@ -9,16 +9,19 @@ namespace FirstTask
     class Program
     {
         static void Main(string[] args)
-        {            
+        {
+            int i;           
+            Console.WriteLine("Enter please quantity of Marks-->");
+            Student.n = int.Parse(Console.ReadLine());
+
             Student Student1 = new Student();
-            
             Console.WriteLine("Enter please name, surname and age of student-->");
             Student1.Name = Console.ReadLine();
             Student1.Surname = Console.ReadLine();
             Student1.Age = byte.Parse(Console.ReadLine());
-
+            
             Console.WriteLine("Enter please Marks of student-->");
-            for (int i = 0; i < Student1.Marks.Length; i++)
+            for (i = 0; i < Student1.Marks.Length; i++)
             {
                 Student1.Marks[i] = new Mark();
                 Console.WriteLine("Subject-->");
@@ -29,7 +32,7 @@ namespace FirstTask
 
             Console.WriteLine("Student : {0}, {1}\nAge = {2}", Student1.Surname, Student1.Name, Student1.Age);
             Console.WriteLine("Subjects and their marks-->");
-            for (int i = 0; i < Student1.Marks.Length; i++)
+            for (i = 0; i < Student1.Marks.Length; i++)
             {
                 Console.WriteLine("Subject : {0} ; Mark = {1}",Student1.Marks[i].Subject, Student1.Marks[i].SubjectMark);                
             }
