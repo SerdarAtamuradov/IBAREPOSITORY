@@ -8,9 +8,9 @@ namespace FirstTask
 {
     class Student
     {
-        public static int n;
-
-        public Mark[] Marks = new Mark[n];
+        public int n;
+        public Mark[] Marks;
+        //public Mark[] Marks = new Mark[n];
         public string Name { get; set; }
         public string Surname { get; set; }
         public byte Age { get; set; }
@@ -31,6 +31,6 @@ namespace FirstTask
         {
             for (int i = 0; i < Marks.Length; i++)
                 Marks[i].SubjectMark = 0;
-        }          
+        }        
     }
 }

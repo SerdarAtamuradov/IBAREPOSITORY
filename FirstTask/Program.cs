@@ -10,11 +10,13 @@ namespace FirstTask
     {
         static void Main(string[] args)
         {
+            Student Student1 = new Student();
             int i;           
             Console.WriteLine("Enter please quantity of Marks-->");
-            Student.n = int.Parse(Console.ReadLine());
+            Student1.n = int.Parse(Console.ReadLine());
+            Student1.Marks = new Mark[Student1.n];
 
-            Student Student1 = new Student();
+            
             Console.WriteLine("Enter please name, surname and age of student-->");
             Student1.Name = Console.ReadLine();
             Student1.Surname = Console.ReadLine();
