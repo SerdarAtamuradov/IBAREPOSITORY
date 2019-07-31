@@ -8,9 +8,8 @@ namespace FirstTask
 {
     class Student
     {
-        public int n;
-        public Mark[] Marks;
-        //public Mark[] Marks = new Mark[n];
+        public int Quantity;
+        public Mark[] Marks;        
         public string Name { get; set; }
         public string Surname { get; set; }
         public byte Age { get; set; }
@@ -19,18 +18,24 @@ namespace FirstTask
         {
             byte Quantity = 0;
             float AmountMark = 0;
-            for (int i = 0; i < Marks.Length; i++)
+            foreach (Mark Grade in Marks)
             {
-                Quantity++;
-                AmountMark += Marks[i].SubjectMark;
+                Quantity++;            
+                AmountMark += Grade.SubjectMark;
             }
             return AmountMark / Quantity;
         }
 
         public void ResetAllMarks()
         {
-            for (int i = 0; i < Marks.Length; i++)
+            //foreach (Mark Grade in Marks)
+            int i = 0;
+            while (i < Marks.Length)
+            {
+                //Grade.SubjectMark = 0;
                 Marks[i].SubjectMark = 0;
+                i++;
+            }
         }        
     }
 }

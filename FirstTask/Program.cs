@@ -13,10 +13,9 @@ namespace FirstTask
             Student Student1 = new Student();
             int i;           
             Console.WriteLine("Enter please quantity of Marks-->");
-            Student1.n = int.Parse(Console.ReadLine());
-            Student1.Marks = new Mark[Student1.n];
+            Student1.Quantity = int.Parse(Console.ReadLine());
+            Student1.Marks = new Mark[Student1.Quantity];
 
-            
             Console.WriteLine("Enter please name, surname and age of student-->");
             Student1.Name = Console.ReadLine();
             Student1.Surname = Console.ReadLine();
