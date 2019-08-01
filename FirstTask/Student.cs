@@ -14,25 +14,23 @@ namespace FirstTask
         public string Surname { get; set; }
         public byte Age { get; set; }
 
-        public float GetAvgMark()
+        public void GetAvgMark(ref float AvgMark, out float AmountMark)
         {
             byte Quantity = 0;
-            float AmountMark = 0;
+            AmountMark = 0;
             foreach (Mark Grade in Marks)
             {
                 Quantity++;            
                 AmountMark += Grade.SubjectMark;
             }
-            return AmountMark / Quantity;
+            AvgMark = AmountMark / Quantity;            
         }
 
         public void ResetAllMarks()
         {
-            //foreach (Mark Grade in Marks)
             int i = 0;
             while (i < Marks.Length)
-            {
-                //Grade.SubjectMark = 0;
+            {                
                 Marks[i].SubjectMark = 0;
                 i++;
             }

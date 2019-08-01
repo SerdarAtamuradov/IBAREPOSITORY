@@ -38,7 +38,9 @@ namespace FirstTask
                 Console.WriteLine("Subject : {0} ; Mark = {1}",Student1.Marks[i].Subject, Student1.Marks[i].SubjectMark);                
             }
 
-            float AvgMark = Student1.GetAvgMark();
+            float AvgMark = 0;
+            Student1.GetAvgMark(ref AvgMark, out float AmountMark);
+            Console.WriteLine("Sum of Student's Marks = {0}", AmountMark);
             Console.WriteLine("Average Mark Of Students = {0}",AvgMark);
 
             Console.WriteLine("Press any key!");
